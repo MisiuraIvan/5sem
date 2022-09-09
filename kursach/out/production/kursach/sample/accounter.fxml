@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="960.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Accounter">
+    <children>
+<TabPane layoutY="29.0" prefHeight="721.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE">
+  <tabs>
+    <Tab text="Список сотрудников">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="665.0" prefWidth="950.0">
+               <children>
+                  <TableView fx:id="emptable" layoutY="102.0" prefHeight="531.0" prefWidth="950.0">
+                    <columns>
+                      <TableColumn fx:id="empid" prefWidth="141.59997254610062" text="Номер сотрудника" />
+                      <TableColumn fx:id="empsname" minWidth="3.20001220703125" prefWidth="161.59999084472656" text="Фамилия" />
+                        <TableColumn fx:id="empname" minWidth="3.20001220703125" prefWidth="140.00006103515625" text="Имя" />
+                        <TableColumn fx:id="empmiddlename" prefWidth="180.800048828125" text="Отчество" />
+                        <TableColumn fx:id="emppost" minWidth="0.0" prefWidth="149.60003662109375" text="Должность" />
+                        <TableColumn fx:id="empoklad" prefWidth="163.199951171875" text="Оклад" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                     <children>
+                        <Label layoutX="223.0" layoutY="17.0" text="Список сотрудников" textFill="#27157b">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="empsearch" layoutX="14.0" layoutY="26.0" />
+                              <Text layoutX="66.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                              <Button fx:id="empidsearch" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="75.0" text="Номер" />
+                              <Button fx:id="empsnamesearch" layoutX="90.0" layoutY="52.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Фамилия" />
+                     </children>
+                  </AnchorPane>
+                        <Button fx:id="emprefresh" layoutX="834.0" layoutY="1.0" mnemonicParsing="false" text="Обновить таблицу" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Расчет ЗП">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="19.0" layoutY="318.0" prefHeight="211.0" prefWidth="324.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <TextField fx:id="worktime" layoutX="161.0" layoutY="20.0" />
+                        <TextField fx:id="sickleave" layoutX="161.0" layoutY="67.0" />
+                        <TextField fx:id="holiday" layoutX="161.0" layoutY="111.0" />
+                        <TextField fx:id="overtime" layoutX="161.0" layoutY="159.0" />
+                        <Text layoutX="24.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отработанные время" />
+                        <Text layoutX="25.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Время на больничном" />
+                        <Text layoutX="25.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Время в отпуске" />
+                        <Text layoutX="25.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сверурочные часы" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="114.0" prefHeight="50.0" prefWidth="917.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <TextField fx:id="sname" layoutX="299.0" layoutY="12.0" />
+                        <TextField fx:id="name" layoutX="511.0" layoutY="12.0" />
+                        <TextField fx:id="middlename" layoutX="752.0" layoutY="13.0" />
+                        <Text layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер сотрудника" />
+                        <Text layoutX="242.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" />
+                        <Text layoutX="480.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" />
+                        <Text layoutX="692.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" />
+                        <ComboBox fx:id="listid" layoutX="131.0" layoutY="11.0" prefHeight="26.0" prefWidth="82.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="19.0" layoutY="175.0" prefHeight="126.0" prefWidth="258.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <TextField fx:id="post" layoutX="96.0" layoutY="26.0" />
+                        <Text layoutX="16.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Должность" />
+                        <TextField fx:id="oklad" layoutX="96.0" layoutY="73.0" />
+                        <Text layoutX="19.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оклад" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="19.0" layoutY="552.0" prefHeight="50.0" prefWidth="910.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Премия %" />
+                        <TextField fx:id="award" layoutX="75.0" layoutY="12.0" />
+                        <Text layoutX="644.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЗП к выдачи" />
+                        <TextField fx:id="freshsalary" layoutX="726.0" layoutY="14.0" />
+                        <Text layoutX="295.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЗП с учетом премии" />
+                        <TextField fx:id="allsalary" layoutX="416.0" layoutY="12.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="369.0" layoutY="173.0" prefHeight="54.0" prefWidth="222.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <Text layoutX="12.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата" />
+                        <ComboBox fx:id="date" layoutX="57.0" layoutY="15.0" prefHeight="26.0" prefWidth="146.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="631.0" layoutY="173.0" prefHeight="54.0" prefWidth="302.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                     <children>
+                        <Text layoutX="21.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Норма времени" />
+                        <TextField fx:id="timenorm" layoutX="123.0" layoutY="15.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="clrbutton" layoutX="19.0" layoutY="626.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="234.0" style="-fx-background-color: orange;" text="Очистить форму" textFill="DARKBLUE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="salarybutton" layoutX="369.0" layoutY="626.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="234.0" style="-fx-background-color: orange;" text="Рассчитать ЗП" textFill="DARKBLUE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="savebutton" layoutX="694.0" layoutY="626.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="234.0" style="-fx-background-color: orange;" text="Сохранить результат" textFill="DARKBLUE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                     <children>
+                        <Label layoutX="212.0" layoutY="17.0" text="Расчет заработной платы" textFill="#27157b">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                        <TextField fx:id="accountsearch" layoutX="24.0" layoutY="35.0" />
+                        <Text layoutX="76.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                        <Button fx:id="accounteridsearch" layoutX="24.0" layoutY="61.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="148.0" text="Номер" />
+                        <AnchorPane layoutX="599.0" layoutY="311.0" prefHeight="211.0" prefWidth="324.0" style="-fx-border-color: orange; -fx-border-width: 5;">
+                           <children>
+                              <TextField fx:id="tax" layoutX="161.0" layoutY="20.0" />
+                              <TextField fx:id="fszn" layoutX="161.0" layoutY="67.0" />
+                              <TextField fx:id="pension" layoutX="161.0" layoutY="111.0" />
+                              <TextField fx:id="social" layoutX="161.0" layoutY="159.0" />
+                              <Text layoutX="12.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Подоходный налог" />
+                              <Text layoutX="13.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В пенсионный фонд" />
+                              <Text layoutX="13.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пенсионное страхование" />
+                              <Text layoutX="13.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Социальное страхование" />
+                           </children>
+                        </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Список табелей">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutY="14.0" prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                     <children>
+                        <Label layoutX="263.0" layoutY="17.0" text="Список табелей" textFill="#27157b">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Label>
+                              <Button fx:id="timesheetempsearch" layoutX="24.0" layoutY="57.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер сотрудника" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="timesheettable" layoutX="1.0" layoutY="102.0" prefHeight="531.0" prefWidth="950.0">
+                     <columns>
+                        <TableColumn fx:id="timesheetid" prefWidth="126.39999079704285" text="Номер табеля" />
+                        <TableColumn fx:id="timesheetemp" prefWidth="142.40003967285156" text="Номер сотрудника" />
+                        <TableColumn fx:id="timesheetdate" prefWidth="108.0" text="Дата" />
+                        <TableColumn fx:id="timesheetworktime" minWidth="1.5999755859375" prefWidth="141.5999755859375" text="Отработанные часы" />
+                        <TableColumn fx:id="timesheetseak" prefWidth="143.20001220703125" text="Больничные" />
+                        <TableColumn fx:id="timesheetholiday" minWidth="0.0" prefWidth="134.39996337890625" text="Отпускные часы" />
+                        <TableColumn fx:id="timesheetovertime" prefWidth="148.800048828125" text="Сверхурочные часы" />
+                     </columns>
+                  </TableView>
+                        <Button fx:id="timesheetrefresh" layoutX="834.0" layoutY="1.0" mnemonicParsing="false" text="Обновить таблицу" />
+                        <TextField fx:id="timesheetsearch" layoutX="24.0" layoutY="18.0" />
+                        <Text layoutX="76.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                        <Button fx:id="timesheetidsearch" layoutX="24.0" layoutY="44.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер табеля" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Список ЗП">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                     <children>
+                        <Label layoutX="329.0" layoutY="17.0" text="Список ЗП" textFill="#27157b">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Label>
+                              <Button fx:id="salaryrefresh" layoutX="834.0" layoutY="1.0" mnemonicParsing="false" text="Обновить таблицу" />
+                              <Button fx:id="salaryempsearch" layoutX="26.0" layoutY="76.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер сотрудника" />
+                              <TextField fx:id="salarysearch" layoutX="26.0" layoutY="23.0" />
+                              <Text layoutX="78.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                              <Button fx:id="salarytimesheetidsearch" layoutX="26.0" layoutY="49.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер табеля" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="salarytable" layoutY="107.0" prefHeight="526.0" prefWidth="950.0">
+                     <columns>
+                        <TableColumn fx:id="salaryemp" prefWidth="116.79999083280563" text="Номер сотрудника" />
+                        <TableColumn fx:id="salarytimesheet" prefWidth="94.4000244140625" text="Номер табеля" />
+                        <TableColumn fx:id="salarydate" prefWidth="111.19999694824219" text="Дата" />
+                        <TableColumn fx:id="salaryaward" prefWidth="72.0" text="Премия" />
+                        <TableColumn fx:id="salaryresult" minWidth="1.5999755859375" prefWidth="106.4000244140625" text="ЗП" />
+                              <TableColumn fx:id="salarytax" prefWidth="104.0" text="Налог" />
+                              <TableColumn fx:id="salaryfszn" prefWidth="129.5999755859375" text="В пенсионный фонд" />
+                              <TableColumn fx:id="salaryfresh" prefWidth="122.40008544921875" text="Начисленная ЗП" />
+                              <TableColumn fx:id="salaryvznos" prefWidth="92.0001220703125" text="ФСЗН" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+            <Tab text="Аналитика">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="-3.0" layoutY="107.0" prefHeight="538.0" prefWidth="978.0" style="-fx-background-color: white;">
+                           <children>
+                              <VBox layoutX="7.0" prefHeight="535.0" prefWidth="475.0">
+                                 <children>
+                                    <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="548.0" prefWidth="475.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="489.0" prefHeight="538.0" prefWidth="468.0">
+                                 <children>
+                                    <Pane fx:id="graphic" prefHeight="538.0" prefWidth="468.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                           <children>
+                              <Label layoutX="329.0" layoutY="17.0" text="Аналитика" textFill="#27157b">
+                                 <font>
+                                    <Font size="46.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="refreshdiagram" layoutX="13.0" layoutY="74.0" mnemonicParsing="false" text="Обновить  диаграму" />
+                              <ComboBox fx:id="graphicid" layoutX="712.0" layoutY="77.0" prefHeight="25.0" prefWidth="76.0" />
+                              <Text layoutX="602.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер сотрудника" />
+                              <TextField fx:id="analyssearch" layoutX="796.0" layoutY="49.0" />
+                              <Text layoutX="848.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                              <Button fx:id="analysempsearch" layoutX="796.0" layoutY="75.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер сотрудника" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Формирование отчетов">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="102.0" prefWidth="1178.0" style="-fx-background-color: orange;">
+                           <children>
+                              <Label layoutX="232.0" layoutY="17.0" text="Формирование отчетов" textFill="#27157b">
+                                 <font>
+                                    <Font size="46.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="analyssearch1" layoutX="52.0" layoutY="42.0" />
+                              <Text layoutX="104.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск" />
+                              <Button fx:id="analysempsearch1" layoutX="52.0" layoutY="68.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Номер сотрудника" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="102.0" prefHeight="548.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button fx:id="createreport" layoutX="447.0" layoutY="68.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="295.0" text="Сформировать отчет по всем сотрудникам" />
+                              <ComboBox fx:id="date1" layoutX="55.0" layoutY="75.0" prefHeight="26.0" prefWidth="146.0" />
+                              <ComboBox fx:id="date2" layoutX="244.0" layoutY="75.0" prefHeight="26.0" prefWidth="146.0" />
+                              <Text layoutX="116.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Период для отчета">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="43.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="С" />
+                              <Text layoutX="225.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="По" />
+                              <Button fx:id="createreport1" layoutX="447.0" layoutY="130.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="296.0" text="Сформировать отчет по выбранному сотруднику" />
+                              <ComboBox fx:id="graphicid1" layoutX="159.0" layoutY="133.0" prefHeight="25.0" prefWidth="76.0" />
+                              <Text layoutX="49.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер сотрудника" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+  </tabs>
+</TabPane>
+      <Button fx:id="exit" layoutX="896.0" layoutY="1.0" mnemonicParsing="false" text="Выход" />
+    </children>
+</AnchorPane>

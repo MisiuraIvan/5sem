@@ -1,0 +1,35 @@
+public class Const {
+    public static final String POSTS_TABLE="posts";
+    public static final String POSTS_ID="idposts";
+    public static final String POSTS_POST="post";
+    public static final String POSTS_OKLAD="oklad";
+    public static final String USER_TABLE="users";
+    public static final String USER_FIRSTNAME="firstname";
+    public static final String USER_LASTNAME="lastname";
+    public static final String USER_LOGIN="login";
+    public static final String USER_PASSWORD="password";
+    public static final String USER_POST="idposts";
+    public static final String USER_MIDDLENAME="middlename";
+    public static final String USER_ID="idUsers";
+    public static final String TIMESHEET_ID="idtimesheet";
+    public static final String TIMESHEET_TABLE="timesheet";
+    public static final String TIMESHEET_DATE="iddate";
+    public static final String TIMESHEET_WORKTIME="worktime";
+    public static final String TIMESHEET_SEAKTIME="sickleave";
+    public static final String TIMESHEET_HOLIDAY="holiday";
+    public static final String TIMESHEET_OVERTIME="overtime";
+    public static final String DATE_MONTH="month";
+    public static final String DATE_YEAR="year";
+    public static final String DATE_TABLE="date";
+    public static final String DATE_ID="iddate";
+    public static final String DATE_WORKHOURS="workhours";
+    public static final String SALARY_TABLE="salary";
+    public static final String SALARY_ID="idsalary";
+    public static final String SALARY_TIMESHEETID="idtimesheet";
+    public static final String SALARY_AWARD="award";
+    public static final String SALARY_SALARY="salary";
+    public static final String SALARY_TAX="tax";
+    public static final String SALARY_FSZN="pension";
+    public static final String SALARY_FRESHSALARY="freshsalary";
+    public static final String SALARY_VZNOS="fszn";
+}
